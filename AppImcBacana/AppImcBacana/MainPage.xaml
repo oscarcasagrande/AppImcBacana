@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppImcBacana.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="Bacana IMC!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Como está seu peso?" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Me fale seu peso e sua altura e eu te falo se vc está dentro da média do IMC!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="18">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Seus Dados"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        
+        <Entry x:Name="Peso" Placeholder="Peso (kg)" MaxLength="6" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" IsPassword="False" ReturnType="Next" Keyboard="Numeric"></Entry>
+        <Entry x:Name="Altura" Placeholder="Altura (cm)" MaxLength="4" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" IsPassword="False" ReturnType="Next" Keyboard="Numeric"></Entry>
+
+        <Label x:Name="Resultado" Text="" FontSize="Large" TextColor="Black" />
+        
+        <Button Text="Verificar meu IMC" Clicked="Button_Clicked"></Button>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Oscar Casagrande"/>
+                        <Span Text="https://oscarcasagrande.com.br" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Button Text="Visite meu site!" Clicked="Button_Clicked_Go_To_WebSite" TextColor="ForestGreen"></Button>
+    </StackLayout>
+
+</ContentPage>
