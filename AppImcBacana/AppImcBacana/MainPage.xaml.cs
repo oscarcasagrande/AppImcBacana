@@ -19,7 +19,7 @@ namespace AppImcBacana
         {
             double peso = Convert.ToInt32(Peso.Text);
             double altura = Convert.ToInt32(Altura.Text);
-            double imc = (peso / (altura / 100 * altura / 100));
+            double imc = (peso / ((altura / 100) * (altura / 100)));
 
             string resultado = string.Format("Seu IMC é {0:N} %", imc);
 
